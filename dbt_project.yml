@@ -39,5 +39,3 @@ models:
   DBT_FUNDAMENTALS:
     +materialized:  table
     # Applies to all files under models/example/
-    example:
-      +materialized: view
