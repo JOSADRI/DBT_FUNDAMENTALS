@@ -5,20 +5,10 @@
 }}
 
 with customers as (
-    SELECT
-        ID AS CUSTOMER_ID,
-        FIRST_NAME,
-        LAST_NAME
-    FROM `dbt-fundamentals-463313`.jaffle_shop.customers
+    SELECT * FROM {{ ref('stg_customers') }}
 ),
 orders as (
-    SELECT
-        ID AS ORDER_ID,
-        USER_ID AS CUSTOMER_ID,
-        ORDER_DATE,
-        STATUS
-    FROM
-        `dbt-fundamentals-463313`.jaffle_shop.orders
+    SELECT * FROM {{ ref('stg_orders') }}
 ),
 customer_order as (
     SELECT
