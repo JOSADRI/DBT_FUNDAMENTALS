@@ -4,4 +4,4 @@ SELECT
     ORDER_DATE,
     STATUS
 FROM
-    `dbt-fundamentals-463313`.jaffle_shop.orders
+    {{ source('jaffle_shop', 'orders') }}
