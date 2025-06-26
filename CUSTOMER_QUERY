@@ -1,0 +1,1 @@
+SELECT * FROM `dbt-fundamentals-463313.jaffle_shop.customers` LIMIT 1000
