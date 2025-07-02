@@ -39,6 +39,6 @@ models:
   dbt_fundamentals:
     +materialized: view
     marts:
-      +materialized: view
+      +materialized: table
     staging:
       +materialized: view
