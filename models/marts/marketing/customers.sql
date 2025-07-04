@@ -15,7 +15,7 @@ customer_order as (
         COUNT(A.ORDER_ID) AS NUMBER_OF_ORDERS,
         SUM(B.AMOUNT) AS LIFETIME_VALUE
     FROM
-        orders A INNER JOIN payments B USING(CUSTOMER_ID)
+        orders A INNER JOIN payments B USING(ORDER_ID)
     GROUP BY 1
 ),
 final as (
