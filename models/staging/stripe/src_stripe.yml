@@ -8,3 +8,12 @@ sources:
     tables:
       - name: payments
         description: One record per payment. Includes the ORDER_ID per payment
+        freshness: 
+          error_after:
+            count: 2920
+            period: day
+          warn_after:
+            count: 2190
+            period: day
+        loaded_at_field: CREATED
+      
