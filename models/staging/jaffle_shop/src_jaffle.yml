@@ -7,7 +7,16 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
-        description: One record per customer.
+        columns:
+          - name: CUSTOMERS_ID
+            tests:
+              - unique
+              - not_null
       - name: orders
+        columns:
+          - name: ORDER_ID
+            tests:
+              - unique
+              - not_null
         description: One record per order. Includes cancelled and deleted orders.
         
