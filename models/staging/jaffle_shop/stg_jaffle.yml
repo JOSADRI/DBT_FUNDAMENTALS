@@ -18,4 +18,9 @@ models:
           - not_null
           - accepted_values:
               values: ['returned','completed','return_pending','shipped','placed']
+      - name: ORDER_ID
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: CUSTOMER_ID
 

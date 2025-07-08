@@ -8,13 +8,13 @@ sources:
     tables:
       - name: customers
         columns:
-          - name: CUSTOMERS_ID
+          - name: ID
             tests:
               - unique
               - not_null
       - name: orders
         columns:
-          - name: ORDER_ID
+          - name: ID
             tests:
               - unique
               - not_null
