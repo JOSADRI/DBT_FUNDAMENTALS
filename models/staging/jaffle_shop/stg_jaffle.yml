@@ -9,6 +9,14 @@ models:
         tests:
           - unique
           - not_null
+      - name: FIRST_NAME
+        description: el nombre propio de una persona
+        tests:
+          - not_null
+      - name: LAST_NAME
+        description: los apellidos de una persona
+        tests:
+          - not_null
   - name: stg_orders
     description: one order per row
     columns:
@@ -18,6 +26,14 @@ models:
           - not_null
           - accepted_values:
               values: ['returned','completed','return_pending','shipped','placed']
+      - name: CUSTOMER_ID
+        description: es lo correspondiente al ID del cliente
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: fecha en la que se realiza un pedido
+        tests:
+          - not_null
       - name: ORDER_ID
         description: primary key
         tests:
@@ -26,4 +42,6 @@ models:
           - relationships:
               to: ref('stg_customers')
               field: CUSTOMER_ID
+      
+      
 

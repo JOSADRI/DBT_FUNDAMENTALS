@@ -1,6 +1,7 @@
 SELECT
     ORDERID as ORDER_ID,
     ID AS PAYMENTS_ID,
-    AMOUNT
+    AMOUNT,
+    PAYMENTMETHOD AS PAYMENT_METHOD
 FROM
     {{ source('stripe', 'payments') }}
