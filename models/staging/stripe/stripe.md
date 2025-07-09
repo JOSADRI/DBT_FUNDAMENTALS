@@ -1,4 +1,4 @@
-{% docs payment_methods %}
+{% docs p_methods %}
 
 | method        | definition             |
 | ------------- | ---------------------- |
