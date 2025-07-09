@@ -18,9 +18,6 @@ sources:
         description: raw customers data
         columns:
           - name: ID
-            
             tests:
               - unique
               - not_null
-        
-        
