@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: This is a replica of the Postgres databases used by our app
+    database: dbt-fundamentals-463313
+    schema: jaffle_shop
+    tables:
+      - name: customers
+        description: raw customers data
+        columns:
+          - name: ID
+            description: primary key for customers data
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        description: raw customers data
+        columns:
+          - name: ID
+            tests:
+              - unique
+              - not_null

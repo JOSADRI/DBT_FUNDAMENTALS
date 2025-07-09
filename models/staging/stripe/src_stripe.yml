@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: This is a replica of the Postgres databases used by our app
+    database: dbt-fundamentals-463313
+    schema: stripe
+    tables:
+      - name: payments
+        description: One record per payment. Includes the ORDER_ID per payment
+        freshness: 
+          error_after:
+            count: 2920
+            period: day
+          warn_after:
+            count: 2190
+            period: day
+        loaded_at_field: CREATED
+      
